@@ -1,0 +1,172 @@
+@import "../../style/config/color.scss";
+
+.homepage-container {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px $light-gray;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $ocean-teal;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $deep-navy;
+}
+
+.homepage-top-cover {
+  background-image: url(../../../public/images/homepagecover2.png);
+  height: 60vh;
+  width: 100%;
+  background-position: center center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid white;
+}
+
+.homepage-top-cover h1 {
+  position: absolute;
+  top: 20vh;
+  left: 3vw;
+  color: white;
+  font-size: 2rem;
+  width: 20vw;
+  text-align: center;
+}
+
+.homepage-ad-container {
+  height: 310px;
+  animation: createBox 2s;
+  border-radius: 5px;
+  padding: 0px 10px;
+  margin-top: 10px;
+
+  color: $deep-navy;
+  text-align: center;
+
+}
+
+.homepage-ad-backgroundcolor {
+
+
+  height: 100%;
+  width: 100%;
+  // background-color: $sunny-yellow ;
+  box-shadow: 0px 2px 6px 2px rgba(205, 176, 123, 0.2);
+  position: relative;
+}
+
+@keyframes createBox {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.homepage-ad-image {
+  background-image: url(../../../public/images/homepage_ad/homepage-ad1.png);
+  background-position: center center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 30px;
+  right: 2%;
+  height: 95%;
+  width: 95%;
+}
+
+
+
+.introduction-homepage-title {
+  text-align: center;
+  color: $deep-navy;
+  margin: 10vh 0px !important;
+}
+
+.introduction-homepage-first-picture,
+.introduction-homepage-second-picture,
+.introduction-homepage-third-picture {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background-position: center center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  margin-top: 30px;
+}
+
+.introduction-homepage-first-picture {
+  background-image: url(../../../public/images/homepage-circle/homepage-circle1.png);
+
+}
+
+.introduction-homepage-second-picture {
+  background-image: url(../../../public/images/homepage-circle/homepage-circle4.png);
+
+}
+
+.introduction-homepage-third-picture {
+  background-image: url(../../../public/images/homepage-circle/homepage-circle5.png);
+}
+
+.introduction-homepage-verticalline {
+  border-right: 2px solid rgb(170, 166, 166);
+  margin-left: 20px;
+  max-height: 170px;
+  margin-top: 50px;
+}
+
+.introduction-homepage-first-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10vw;
+}
+
+.introduction-homepage-second-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 50vw;
+}
+
+.introduction-homepage-third-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20vw;
+}
+
+.introduction-homepage-text {
+  margin-top: 80px;
+  width: 200px;
+  margin-left: 20px;
+}
+
+.introduction-homepage-text p {
+  font-size: 0.8rem;
+}
+
+.homepage-lists-container {
+  margin: 3vw 5vw !important;
+}

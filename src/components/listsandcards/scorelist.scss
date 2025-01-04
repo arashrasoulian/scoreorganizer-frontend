@@ -1,0 +1,86 @@
+.homepage-list-title {
+  color: $deep-navy;
+  text-align: center;
+  // background-color: $deep-navy;
+  box-shadow: 0px 2px 6px 2px rgba(30, 42, 94, 0.2);
+  border-radius: 5px;
+
+  margin: 8px -8px;
+}
+
+.homepage-list-eachbox {
+  // background-color: $sunny-yellow;
+  font-size: 0.7rem;
+  line-height: 12px;
+  margin: 8px -8px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 6px 2px rgba(205, 176, 123, 0.2);
+
+}
+
+
+.homepage-list-eachbox {
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.scorelist-link {
+  text-decoration: none !important;
+  color: $ocean-teal;
+  position: relative;
+}
+
+.delete-button-scorelist-container {
+  position: absolute;
+  top: 10px;
+  right: -10px;
+}
+
+.delete-button-scorelist {
+  color: $ocean-teal !important;
+}
+
+.uploader-list-info {
+  position: absolute;
+  bottom: 100%;
+  /* Position it above the card */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.uploader-list :hover {
+  display: block !important;
+}
+
+.scorelist-link:hover .uploader-list-info {
+  opacity: 1;
+  visibility: visible;
+}
+
+.delete-button-scorelist {
+  color: $ocean-teal !important;
+}

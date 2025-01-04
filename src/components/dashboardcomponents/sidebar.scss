@@ -1,0 +1,31 @@
+.dashboard-sidebar-container{
+  background-color: $light-blue;
+  margin-left: 5vw;
+  // padding-top: 2vw;
+}
+.dashboard-sidebar-container h3{
+  margin-left: 22px !important;
+}
+.dashboard-sidebar-container li :hover{
+  color: $deep-navy;
+}
+.dashboard-sidebar-container li {
+  border-bottom: 2px solid white;
+  // margin-top: 5px;
+}
+
+.sidebar-pagebutton-active{
+  background-color: $sunny-yellow !important; /* Red background for the active link */
+  color: white;
+  position: relative;
+
+}
+.sidebar-pagebutton-active .triangle-right{
+  width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-left: 15px solid $sunny-yellow;
+	border-bottom: 20px solid transparent;
+  position: absolute;
+  right: -15px;
+}

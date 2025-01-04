@@ -1,0 +1,58 @@
+
+.landingpage-slideshow-box-top {
+  background-color: $ocean-teal;
+  height: 58vh;
+
+  border-bottom-left-radius: 30px 30px;
+  border-bottom-right-radius: 30px 30px;
+  position: relative;
+
+}
+
+.landingpage-slideshow-top {
+  position: absolute;
+  bottom: -5vh;
+  left: 0vw;
+}
+
+
+.landingpage-slide-top-button {
+  position: absolute;
+
+  left: 11vw;
+  bottom: 10vh;
+
+}
+
+.landingpage-slide-top-button .sign-link {
+  text-decoration: none;
+  font-size: 0.8rem;
+  background-color: $sunny-yellow;
+  padding: 7px 36px;
+  border-radius: 5px;
+  color: black;
+}
+
+.landingpage-slideshow-container {
+  position: relative;
+  height: 50vh;
+}
+
+.landingpage-slideshow-top .svglink {
+  position: absolute;
+  right: 11vw;
+  top: 8vh;
+
+}
+
+.landingpage-slide-top-title {
+  position: absolute;
+  left: 11vw;
+  top: 8vh;
+  max-width: 37vw;
+
+}
+
+.landingpage-slideshow-top p {
+  font-size: 2.2rem;
+}

@@ -1,0 +1,40 @@
+.landingpage-container {
+  margin: 3vh 1vw;
+}
+
+.landingpage-static {
+  margin: 2vh 0px;
+  height: 20vh;
+  background-color: $ocean-teal;
+  position: relative;
+
+}
+
+.landingpage-static-data {
+  position: absolute;
+  bottom: 3vh;
+  left: 5vh;
+
+}
+
+.landingpage-link-box {
+  margin: 2vh 0px;
+  height: 20vh;
+  background-color: $sunny-yellow;
+  position: relative;
+
+}
+
+.landingpage-static-data p {
+  font-size: 2rem;
+}
+
+.landingpage-link-data {
+  position: absolute;
+  bottom:3vh;
+  left: 5vh;
+}
+
+.landingpage-link-data p {
+  font-size: 2rem;
+}

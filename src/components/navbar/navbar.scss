@@ -1,0 +1,65 @@
+/* Basic navbar styling */
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10vw;
+  background-color: $light-blue;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  mix-blend-mode: multiply;
+  height: 8vh;
+  width: auto;
+}
+
+.welcome-navbar {
+  margin-left: 10vw;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+.nav-sign-link{
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  background-color: $sunny-yellow;
+  padding: 7px 16px;
+  border-radius: 3px;
+  color: black ;
+
+}
+.nav-link {
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.nav-link:hover {
+  color: #0056b3;
+}
+
+.navbar-profile-picture {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+
+
+.logout-button-navbar:hover {
+  cursor: pointer;
+}
