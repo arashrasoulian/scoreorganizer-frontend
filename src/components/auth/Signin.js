@@ -7,7 +7,7 @@ const Signin = ({ setCurrUser }) => {
   const navigate = useNavigate();
   const formRef = useRef();
   const login = async (userInfo, setCurrUser) => {
-    const url = "http://localhost:3000/login";
+    const url = "https://backend-scoreorganizer-08671ae228b7.herokuapp.com/login";
     try {
       const response = await fetch(url, {
         method: "post",
