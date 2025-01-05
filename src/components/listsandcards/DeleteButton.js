@@ -8,9 +8,9 @@ const DeleteButton = ({ scoreId, isOwner, storingId, onDeleteSuccess }) => {
     try {
       let url = "";
       if (isOwner) {
-        url = `/api/v1/scores/${scoreId}`;
+        url = `https://backend-scoreorganizer-08671ae228b7.herokuapp.com/api/v1/scores/${scoreId}`;
       } else {
-        url = `/api/v1/storings/${storingId}`;
+        url = `https://backend-scoreorganizer-08671ae228b7.herokuapp.com/api/v1/storings/${storingId}`;
       }
 
       const response = await fetch(url, {
@@ -18,7 +18,7 @@ const DeleteButton = ({ scoreId, isOwner, storingId, onDeleteSuccess }) => {
       });
 
       if (response.ok) {
-        onDeleteSuccess(); // Call the success callback when deleted
+        onDeleteSuccess();
         alert("Successfully deleted!");
       } else {
         alert("Failed to delete.");

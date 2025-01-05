@@ -43,6 +43,7 @@ const ScorePage = () => {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error fetching data: {error.message}</p>;
+console.log(data ,data.pdf_url);
 
   return (
     <div className="score-page">
