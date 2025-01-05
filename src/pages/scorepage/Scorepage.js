@@ -21,7 +21,7 @@ const ScorePage = () => {
       const formData = new FormData();
       formData.append("storing[score_id]", data.id);
       formData.append("storing[session_type]", sessionType);
-      const response = await fetch("/api/v1/storings", {
+      const response = await fetch("https://backend-scoreorganizer-08671ae228b7.herokuapp.com/api/v1/storings", {
         method: "POST",
         body: formData,
         headers: {

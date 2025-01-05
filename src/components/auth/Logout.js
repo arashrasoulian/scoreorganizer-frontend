@@ -6,7 +6,7 @@ const Logout = () => {
   const dispatch = useDispatch();
   const logout = async () => {
     try {
-      const response = await fetch("/logout", {
+      const response = await fetch("https://backend-scoreorganizer-08671ae228b7.herokuapp.com/logout", {
         method: "delete",
         headers: {
           "content-type": "application/json",

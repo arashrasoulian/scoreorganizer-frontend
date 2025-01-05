@@ -25,7 +25,7 @@ export function Myverticallycenteredmodal(props) {
     formData.append("score[composer]", composer);
     formData.append("score[score_type]", scoreType);
     try {
-      const response = await fetch("/api/v1/scores", {
+      const response = await fetch("https://backend-scoreorganizer-08671ae228b7.herokuapp.com/api/v1/scores", {
         method: "POST",
         body: formData,
         headers: {
