@@ -4,9 +4,11 @@ import { clearCurrUser } from '../../store/userSlice';
 
 const Logout = () => {
   const dispatch = useDispatch();
+  const API_URL = process.env.REACT_APP_API_URL;
+
   const logout = async () => {
     try {
-      const response = await fetch("https://backend-scoreorganizer-08671ae228b7.herokuapp.com/logout", {
+      const response = await fetch(`${API_URL}/logout`, {
         method: "delete",
         headers: {
           "content-type": "application/json",

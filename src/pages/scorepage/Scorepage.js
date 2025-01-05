@@ -8,6 +8,8 @@ const ScorePage = () => {
   const [sessionType, setSessionType] = useState("repertoire");
   const [message, setMessage] = useState("");
   const token = useSelector((state) => state.user.token);
+  const API_URL = process.env.REACT_APP_API_URL;
+
   const { data, loading, error } = useFetch(
     `/api/v1/scores/${id}`
   );
@@ -21,7 +23,7 @@ const ScorePage = () => {
       const formData = new FormData();
       formData.append("storing[score_id]", data.id);
       formData.append("storing[session_type]", sessionType);
-      const response = await fetch("https://backend-scoreorganizer-08671ae228b7.herokuapp.com/api/v1/storings", {
+      const response = await fetch(`${API_URL}/api/v1/storings`, {
         method: "POST",
         body: formData,
         headers: {

@@ -2,10 +2,12 @@ import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Signup = ({ setCurrUser }) => {
+  const API_URL = process.env.REACT_APP_API_URL;
+
   const formRef = useRef();
   const navigate = useNavigate();
   const signup = async (userInfo, setCurrUser) => {
-    const url = "https://backend-scoreorganizer-08671ae228b7.herokuapp.com/signup";
+    const url = `${API_URL}/signup`;
     try {
       const response = await fetch(url, {
         method: "post",

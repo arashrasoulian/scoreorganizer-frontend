@@ -7,8 +7,7 @@ const useFetch = (url) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const token = useSelector((state) => state.user.token);
-  const API_URL = 'https://backend-scoreorganizer-08671ae228b7.herokuapp.com';
-  const API_TEST = 'http://localhost:3000'
+  const API_URL = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     const fetchData = async () => {

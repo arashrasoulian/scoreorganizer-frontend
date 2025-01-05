@@ -5,9 +5,11 @@ import { setToken } from "../../store/userSlice";
 const Signin = ({ setCurrUser }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const API_URL = process.env.REACT_APP_API_URL;
+
   const formRef = useRef();
   const login = async (userInfo, setCurrUser) => {
-    const url = "https://backend-scoreorganizer-08671ae228b7.herokuapp.com/login";
+    const url = `${API_URL}/login`;
     try {
       const response = await fetch(url, {
         method: "post",
