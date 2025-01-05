@@ -8,7 +8,7 @@ export default function Homepage() {
     ["Most popullar", "most_popular_scores"],
   ];
   const { data, loading, error } = useFetch(
-    "http://localhost:3000/api/v1/scores/home_page_data"
+    "/api/v1/scores/home_page_data"
   );
 
   if (loading) return <p>Loading...</p>;

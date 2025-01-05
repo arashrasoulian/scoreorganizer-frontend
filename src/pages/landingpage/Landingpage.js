@@ -7,7 +7,7 @@ import useFetch from "../../hooks/useFetch";
 
 export default function Landingpage() {
   const { data, loading, error } = useFetch(
-    "https://backend-scoreorganizer-08671ae228b7.herokuapp.com/api/v1/statistics"
+    "/api/v1/statistics"
   );
 
   return (

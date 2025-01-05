@@ -8,7 +8,7 @@ const Myscores = () => {
   const [modalShow, setModalShow] = React.useState(false);
   const [groupedScores, setGroupedScores] = useState({});
   const { data, loading, error } = useFetch(
-    "http://localhost:3000/api/v1/scores"
+    "/api/v1/scores"
   );
   const currUser = useSelector((state) => state.user.currUser);
 

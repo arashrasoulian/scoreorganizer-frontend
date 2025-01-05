@@ -9,7 +9,7 @@ const ScorePage = () => {
   const [message, setMessage] = useState("");
   const token = useSelector((state) => state.user.token);
   const { data, loading, error } = useFetch(
-    `http://localhost:3000/api/v1/scores/${id}`
+    `/api/v1/scores/${id}`
   );
 
   const handleSessionTypeChange = (e) => {
@@ -21,7 +21,7 @@ const ScorePage = () => {
       const formData = new FormData();
       formData.append("storing[score_id]", data.id);
       formData.append("storing[session_type]", sessionType);
-      const response = await fetch("http://localhost:3000/api/v1/storings", {
+      const response = await fetch("/api/v1/storings", {
         method: "POST",
         body: formData,
         headers: {

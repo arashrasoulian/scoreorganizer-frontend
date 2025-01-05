@@ -5,7 +5,7 @@ const Signup = ({ setCurrUser }) => {
   const formRef = useRef();
   const navigate = useNavigate();
   const signup = async (userInfo, setCurrUser) => {
-    const url = "https://backend-scoreorganizer-08671ae228b7.herokuapp.com/signup";
+    const url = "/signup";
     try {
       const response = await fetch(url, {
         method: "post",

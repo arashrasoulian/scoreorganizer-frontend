@@ -25,7 +25,7 @@ export function Myverticallycenteredmodal(props) {
     formData.append("score[composer]", composer);
     formData.append("score[score_type]", scoreType);
     try {
-      const response = await fetch("http://localhost:3000/api/v1/scores", {
+      const response = await fetch("/api/v1/scores", {
         method: "POST",
         body: formData,
         headers: {

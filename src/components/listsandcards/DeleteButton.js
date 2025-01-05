@@ -8,9 +8,9 @@ const DeleteButton = ({ scoreId, isOwner, storingId, onDeleteSuccess }) => {
     try {
       let url = "";
       if (isOwner) {
-        url = `http://localhost:3000/api/v1/scores/${scoreId}`;
+        url = `/api/v1/scores/${scoreId}`;
       } else {
-        url = `http://localhost:3000/api/v1/storings/${storingId}`;
+        url = `/api/v1/storings/${storingId}`;
       }
 
       const response = await fetch(url, {
