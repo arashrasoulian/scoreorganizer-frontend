@@ -12,12 +12,12 @@ export default function Landingpage() {
     <div className="landingpage-container">
       <Slideshow />
       <div className="landingpage-data-boxes">
-        <div className="row ">
+        <div className="row">
 
           {data &&
             Object.entries(data).map(([key, value]) => {
               return (
-                <div className="col-xl-4 col-md-6 col-12  ">
+                <div className="col-xl-4 col-md-6 col-12">
                   <div className="landingpage-static">
                     <div className="landingpage-static-data">
                       {key === "total_users" ? "members" : "sheets uploaded"}
