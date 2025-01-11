@@ -27,6 +27,7 @@ export function Navbar() {
         {!currUser ? (
           <>
             <Link to="/signin" className="nav-sign-link">
+
               Sign In
             </Link>
             <Link to="/signup" className="nav-sign-link">

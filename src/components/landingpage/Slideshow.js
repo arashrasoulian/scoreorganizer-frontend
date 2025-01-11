@@ -86,11 +86,14 @@ const Slideshow = () => {
       </div>
 
       <div className="landingpage-slide-top-button">
-        <Link to="/signin" className="sign-link">
+        {/* <Link to="/signin" className="sign-link">
           Sign In
-        </Link>
-        <Link to="/signup" className="sign-link mx-3">
-          Sign Up
+        </Link> */}
+        <Link to="/signup" className='link-getstart'>
+        <div className="sign-link mx-5">
+        Get Started
+        </div>
+
         </Link>
       </div>
     </div>

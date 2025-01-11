@@ -17,14 +17,14 @@
 
 .navbar-logo img {
   mix-blend-mode: multiply;
-  height: 8vh;
+  height: 10vh;
   width: auto;
 }
 
 .welcome-navbar {
   margin-left: 10vw;
   font-size: 1.2rem;
-  color: #333;
+  color: white;
 }
 
 .navbar-right {
@@ -34,17 +34,31 @@
 .nav-sign-link{
   margin-left: 20px;
   text-decoration: none;
-  font-size: 1.1rem;
-  background-color: $sunny-yellow;
+  font-size: 1.2rem;
+  background-color: $light-blue;
   padding: 7px 16px;
   border-radius: 3px;
-  color: black ;
+  color: white ;
+  box-shadow:  0px 6px 8px rgba(0, 0, 0, 0.2);
+
+}
+.nav-sign-link:hover{
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  background-color: $light-blue;
+  padding: 7px 16px;
+  border-radius: 3px;
+  color: white ;
+  box-shadow:  0px 6px 8px rgba(0, 0, 0, 0.5);
 
 }
 .nav-link {
   margin-left: 20px;
   text-decoration: none;
   font-size: 1.1rem;
+  color: white !important;
+
 }
 
 .nav-link:hover {

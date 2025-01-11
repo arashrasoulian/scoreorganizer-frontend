@@ -1,20 +1,24 @@
 .landingpage-container {
   margin: 3vh 1vw;
 }
-
+.landingpage-data-boxes{
+  margin:0px 10vw;
+}
 .landingpage-static {
   margin: 2vh 0px;
   height: 20vh;
   background-color: $ocean-teal;
   position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 }
-
+.landingpage-static:hover{
+  transform: translateY(-10px);
+}
 .landingpage-static-data {
   position: absolute;
   bottom: 3vh;
   left: 5vh;
-
 }
 
 .landingpage-link-box {
@@ -22,9 +26,11 @@
   height: 20vh;
   background-color: $sunny-yellow;
   position: relative;
-
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+.landingpage-link-box:hover{
+  transform: translateY(-10px);
+}
 .landingpage-static-data p {
   font-size: 2rem;
 }

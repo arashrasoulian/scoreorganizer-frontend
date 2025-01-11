@@ -1,11 +1,13 @@
 
 .landingpage-slideshow-box-top {
-  background-color: $ocean-teal;
-  height: 58vh;
-
-  border-bottom-left-radius: 30px 30px;
-  border-bottom-right-radius: 30px 30px;
+  background-color: white;
+  height: 50vh;
+margin:10vh 10vw;
+margin-top: 20vh;
+  // border-bottom-left-radius: 30px 30px;
+  // border-bottom-right-radius: 30px 30px;
   position: relative;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -13,6 +15,7 @@
   position: absolute;
   bottom: -5vh;
   left: 0vw;
+  color: $light-blue ;
 }
 
 
@@ -23,15 +26,35 @@
   bottom: 10vh;
 
 }
+.landingpage-slide-top-button .link-getstart{
+  text-decoration: none !important;
+
+}
 
 .landingpage-slide-top-button .sign-link {
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 1rem;
   background-color: $sunny-yellow;
-  padding: 7px 36px;
+  padding: 0.8rem 2rem;
   border-radius: 5px;
-  color: black;
+  color: $light-blue;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
+
+
+
+
+.landingpage-slide-top-button .sign-link:hover {
+  transform: scale(1.06) !important;
+  background-color: $light-gray;
+}
+
+
+
+
+
+
 
 .landingpage-slideshow-container {
   position: relative;
@@ -41,18 +64,18 @@
 .landingpage-slideshow-top .svglink {
   position: absolute;
   right: 11vw;
-  top: 8vh;
+  top: 2vh;
 
 }
 
 .landingpage-slide-top-title {
   position: absolute;
   left: 11vw;
-  top: 8vh;
+  top: 2vh;
   max-width: 37vw;
 
 }
 
 .landingpage-slideshow-top p {
-  font-size: 2.2rem;
+  font-size:calc(1rem + 1vw) ;
 }
