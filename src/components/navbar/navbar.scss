@@ -58,7 +58,7 @@
 .nav-link {
   margin-left: 30px;
   text-decoration: none;
-  font-size: 1.3rem !important;
+  font-size: calc(0.7rem + 0.7vw) !important;
   color: $light-blue !important;
 
 }
