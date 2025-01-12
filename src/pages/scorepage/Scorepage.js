@@ -10,9 +10,7 @@ const ScorePage = () => {
   const token = useSelector((state) => state.user.token);
   const API_URL = process.env.REACT_APP_API_URL;
 
-  const { data, loading, error } = useFetch(
-    `/api/v1/scores/${id}`
-  );
+  const { data, loading, error } = useFetch(`/api/v1/scores/${id}`);
 
   const handleSessionTypeChange = (e) => {
     setSessionType(e.target.value);
@@ -45,37 +43,52 @@ const ScorePage = () => {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error fetching data: {error.message}</p>;
-console.log(data ,data.pdf_url);
+  console.log(data, data.pdf_url);
 
   return (
     <div className="score-page">
       <div className="row">
-        <div className="col-12 col-lg-7 pdf-scorepage mx-lg-5 mx-3">
+        <div className="col-12 col-xl-7 pdf-scorepage ml-lg-5 ">
           <embed src={data.pdf_url} width="100%" />
         </div>
         <div className="col-12 col-lg-4 scorepage-descriptions mt-3 mt-lg-5">
-          <h1>{data.name}</h1>
-          <h2>{data.composer}</h2>
-          <p>{data.instrument}</p>
-          <div>
-            <label htmlFor="sessionType">
-              Add this score to your collection:
-            </label>
-            <select
-              id="sessionType"
-              value={sessionType}
-              onChange={handleSessionTypeChange}
-            >
-              <option value="repertoire">Repertoire</option>
-              <option value="practicing">Practicing</option>
-              <option value="future_plan">Future Plan</option>
-              <option value="orchestral">Orchestral</option>
-            </select>
+          <div className="scorepage-info-box">
+            <h2>{data.name}</h2>
+            <p>
+              <strong>Composer:</strong> {data.composer}
+            </p>
+            <p>
+              <strong>Instrument:</strong> {data.instrument}
+            </p>
+            <p>
+              <strong>Difficulty:</strong> Difficulty Level
+            </p>
+            <p>
+              <strong>Description:</strong> A short description of the score
+              goes here. It provides details about the piece, its history, or
+              other relevant information.
+            </p>
+            <div className="category-form">
+              <label htmlFor="sessionType">
+                <h4>Add this score to your collection:</h4>
+              </label>
+              <select
+                id="sessionType"
+                className="custom-select"
+                value={sessionType}
+                onChange={handleSessionTypeChange}
+              >
+                <option value="repertoire">Repertoire</option>
+                <option value="practicing">Practicing</option>
+                <option value="future_plan">Future Plan</option>
+                <option value="orchestral">Orchestral</option>
+              </select>
+              <button className="add-button " onClick={handleSaveScore}>
+                Add to My Scores
+              </button>
+            </div>
+            {message && <p>{message}</p>}
           </div>
-
-          <button onClick={handleSaveScore}>Add to My Scores</button>
-
-          {message && <p>{message}</p>}
         </div>
       </div>
     </div>

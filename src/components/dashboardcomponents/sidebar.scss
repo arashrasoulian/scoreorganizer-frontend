@@ -15,6 +15,7 @@
 .dashboard-sidebar-container li {
   border-bottom: 2px solid white;
   color: white;
+  height: 50PX;
   // margin-top: 5px;
 }
 
@@ -31,9 +32,9 @@
 .sidebar-pagebutton-active .triangle-right{
   width: 0;
 	height: 0;
-	border-top: 20px solid transparent;
-	border-left: 15px solid $sunny-yellow;
-	border-bottom: 20px solid transparent;
+	border-top: 25px solid transparent;
+	border-left: 25px solid $sunny-yellow;
+	border-bottom: 25px solid transparent;
   position: absolute;
-  right: -15px;
+  right: -24px;
 }
