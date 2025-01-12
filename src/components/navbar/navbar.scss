@@ -24,7 +24,7 @@
 .welcome-navbar {
   margin-left: 10vw;
   font-size: 1.2rem;
-  color: white;
+  color: $light-blue;
 }
 
 .navbar-right {
@@ -56,10 +56,10 @@
 
 }
 .nav-link {
-  margin-left: 20px;
+  margin-left: 30px;
   text-decoration: none;
-  font-size: 1.1rem;
-  color: white !important;
+  font-size: 1.3rem !important;
+  color: $light-blue !important;
 
 }
 

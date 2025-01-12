@@ -30,7 +30,7 @@ const Logout = () => {
   };
 
   return (
-    <div>
+    <div className='nav-link'>
       <div onClick={handleClick} >Logout</div>
     </div>
   );

@@ -9,7 +9,9 @@ export function Dashboard() {
       <div className="">
         <div className="row flex-nowrap mt-5">
           <Sidebar />
-          <Outlet />
+          <div className="mt-5">
+            <Outlet />
+          </div>
         </div>
       </div>{" "}
     </div>

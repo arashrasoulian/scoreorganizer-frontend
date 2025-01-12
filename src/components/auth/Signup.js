@@ -63,11 +63,11 @@ const Signup = ({ setCurrUser }) => {
         <input type="text" name="last_name" placeholder="zareii" required />
         <br />
         city: <input type="text" name="city" placeholder="tehran" required />
-        <br /> */}
-          {/* phone number:{" "}
+        <br />
+           phone number:{" "}
         <input type="tel" name="phone" placeholder="091211111" required />
-        <br /> */}
-          {/* are you a teacher: <input type="checkbox" name='teacher' placeholder="email" defaultChecked={true} />
+        <br />
+          are you a teacher: <input type="checkbox" name='teacher' placeholder="email" defaultChecked={true} />
       <br /> */}
 
           <input

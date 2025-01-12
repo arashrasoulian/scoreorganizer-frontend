@@ -1,19 +1,27 @@
 .dashboard-sidebar-container{
   background-color: $light-blue;
   margin-left: 5vw;
+  padding-top: 10vh;
   // padding-top: 2vw;
 }
 .dashboard-sidebar-container h3{
-  margin-left: 22px !important;
+  margin-left: 32px !important;
+
+  margin-bottom: 3vh;
 }
 .dashboard-sidebar-container li :hover{
-  color: $deep-navy;
+  color: white;
 }
 .dashboard-sidebar-container li {
   border-bottom: 2px solid white;
+  color: white;
   // margin-top: 5px;
 }
 
+.dashboard-sidebar-container span{
+  color: white;
+
+}
 .sidebar-pagebutton-active{
   background-color: $sunny-yellow !important; /* Red background for the active link */
   color: white;
