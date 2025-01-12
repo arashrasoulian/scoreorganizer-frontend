@@ -19,7 +19,7 @@ export function Navbar() {
           <img src="logo2.png" alt="Logo" />
         </Link>
         {currUser ? (
-          <span className="welcome-navbar d-none d-md-block">hello {emailName(currUser.email).toUpperCase()} </span>
+          <span className="welcome-navbar d-none d-md-block">Hello {emailName(currUser.email).toUpperCase()} </span>
         ) : null}
       </div>
 
@@ -49,8 +49,8 @@ export function Navbar() {
             <Link to="/dashboard/personaldata" className="nav-link d-none d-md-block">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
+                width="20"
+                height="20"
                 fill="currentColor"
                 className="bi bi-person-circle"
                 viewBox="0 0 16 16"

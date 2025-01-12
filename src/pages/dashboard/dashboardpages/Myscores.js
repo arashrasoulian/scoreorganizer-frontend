@@ -7,9 +7,7 @@ import Scorelist from "../../../components/listsandcards/Scorelist";
 const Myscores = () => {
   const [modalShow, setModalShow] = React.useState(false);
   const [groupedScores, setGroupedScores] = useState({});
-  const { data, loading, error } = useFetch(
-    "/api/v1/scores"
-  );
+  const { data, loading, error } = useFetch("/api/v1/scores");
   const currUser = useSelector((state) => state.user.currUser);
 
   const groupScoresBySessionType = (scores) => {
@@ -25,9 +23,9 @@ const Myscores = () => {
 
   const putObjectInArray = (scoreObject) => {
     for (const property in scoreObject) {
-      setGroupedScores(prevState => ({
+      setGroupedScores((prevState) => ({
         ...prevState,
-        [property]: scoreObject[property]
+        [property]: scoreObject[property],
       }));
     }
   };
@@ -62,12 +60,13 @@ const Myscores = () => {
           </div>
         </div>
       </div>
-
-      <div
-        onClick={() => setModalShow(true)}
-        className="mx-4 mt-4 py-2 px-3 myscore-addnewpdf-button col-4 col-md-3"
-      >
-        add new pdf
+      <div className="d-flex justify-content-center align-items-center">
+        <div
+          onClick={() => setModalShow(true)}
+          className="mx-4 mt-4 py-2 px-3 myscore-addnewpdf-button col-4 col-md-3"
+        >
+          add new pdf
+        </div>
       </div>
       <div className="row mx-4 mt-1">
         {Object.keys(groupedScores).length === 0 ? (

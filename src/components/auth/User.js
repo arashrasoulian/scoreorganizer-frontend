@@ -34,7 +34,7 @@ const User = () => {
     <Router>
       <div>
         <Navbar/>
-        <Routes>
+        <Routes >
           <Route
             path="/"
             element={
