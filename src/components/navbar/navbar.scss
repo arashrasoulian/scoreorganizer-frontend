@@ -5,8 +5,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 10vw;
-  background-color: $light-blue;
-  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -40,6 +40,7 @@
   border-radius: 3px;
   color: white ;
   box-shadow:  0px 6px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 }
 .nav-sign-link:hover{
@@ -50,7 +51,8 @@
   padding: 7px 16px;
   border-radius: 3px;
   color: white ;
-  box-shadow:  0px 6px 8px rgba(0, 0, 0, 0.5);
+  box-shadow:  0px 0px 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.06) !important;
 
 }
 .nav-link {
