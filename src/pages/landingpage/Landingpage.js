@@ -13,15 +13,31 @@ export default function Landingpage() {
       <Slideshow />
       <div className="landingpage-data-boxes">
         <div className="row">
-
           {data &&
             Object.entries(data).map(([key, value]) => {
               return (
                 <div className="col-xl-4 col-md-6 col-12">
                   <div className="landingpage-static">
-                    <div className="landingpage-static-data">
-                      {key === "total_users" ? "members" : "sheets uploaded"}
-                      <p>{value} </p>
+                    <div className="landingpage-static-data ">
+                      {key === "total_users" ? (
+                        <div class="landingpage-statics-icon">
+                          <img
+                            src="images/landingpage-icons/member.png"
+                            alt="member"
+                          />
+                        </div>
+                      ) : (
+                        <div class="landingpage-statics-icon">
+                          <img
+                            src="images/landingpage-icons/document.png"
+                            alt="member"
+                          />
+                        </div>
+                      )}
+                      <div className="landingpage-static-data-letters d-inline-flex d-lg-flex flex-lg-column mt-3 mt-lg-0">
+                        <div className="mr-2">{value} </div>
+                        <div>{key === "total_users" ? "members acount" : "sheets uploaded"}</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -30,9 +46,14 @@ export default function Landingpage() {
 
           <div className="col-xl-4 col-md-6 col-12">
             <div className="landingpage-static">
-              <div className="landingpage-link-data">
-                Get started now
-                <p>Home page </p>
+              <div className="landingpage-static-data">
+                <div class="landingpage-statics-icon">
+                  <img src="images/landingpage-icons/violin.png" alt="member" />
+                </div>
+                <div className="landingpage-static-data-letters  d-inline-flex d-lg-flex flex-lg-column mt-3 mt-lg-0">
+                  <div className="mr-2">10</div>
+                  <div>instrument</div>
+                </div>
               </div>
             </div>
           </div>
