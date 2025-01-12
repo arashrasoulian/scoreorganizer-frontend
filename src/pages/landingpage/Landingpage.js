@@ -29,7 +29,7 @@ export default function Landingpage() {
             })}
 
           <div className="col-xl-4 col-md-6 col-12">
-            <div className="landingpage-link-box">
+            <div className="landingpage-static">
               <div className="landingpage-link-data">
                 Get started now
                 <p>Home page </p>

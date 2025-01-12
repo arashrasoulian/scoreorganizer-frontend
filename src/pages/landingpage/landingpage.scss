@@ -7,10 +7,12 @@
 .landingpage-static {
   margin: 2vh 0px;
   height: 20vh;
-  background-color: $ocean-teal;
+  background-color: white;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
+border-radius: 5px;
+// box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2);
+border: 2px solid $light-blue;
 }
 .landingpage-static:hover{
   transform: translateY(-10px);
