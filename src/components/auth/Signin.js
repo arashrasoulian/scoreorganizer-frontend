@@ -50,22 +50,26 @@ const Signin = ({ setCurrUser }) => {
     navigate("/signup");
   };
   return (
-    <div className="m-5">
-      <form ref={formRef} onSubmit={handleSubmit} >
-        Email: <input type="email" name="email" placeholder="email" className="mt-5"/>
+    <div className=" login-body">
+      <div className="sign-in-box">
+      <h1>Sign In</h1>
+
+        <form ref={formRef} onSubmit={handleSubmit} >
+       <input type="email" name="email" placeholder="email" className="mt-5"/>
         <br />
-        Password:{" "}
+
         <input type="password" name="password" placeholder="password" />
         <br />
-        <input type="submit" value="Signin" />
+        <button type="submit" value="Signin" >Sign in</button>
       </form>
       <br />
       <div>
-        Not registered yet,{" "}
-        <a href="#signup" onClick={handleClick}>
-          Signup
-        </a>{" "}
+        <a href="#">Forgot Password?</a>
+        <a href="#signup" onClick={handleClick}>Create an Account</a>
+
       </div>
+      </div>
+
     </div>
   );
 };
