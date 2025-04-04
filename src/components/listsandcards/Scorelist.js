@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import DeleteButton from "./DeleteButton";
+
 export default function Scorelist({ props, title }) {
   const [isDeleted, setIsDeleted] = useState(false); // Track if the card is deleted
+  const dificalty = ["Biginner", "Intermediate", "Advanced"];
+
   const handleDeleteSuccess = () => {
     setIsDeleted(true); // Remove the card from the UI when deleted
   };
@@ -12,19 +15,23 @@ export default function Scorelist({ props, title }) {
     const username = email.split("@")[0];
     return username;
   }
+  const textfitter = (text) => {
+    return text.length > 22 ? text.slice(0, 22) + "..." : text;
+  };
+  const getrandomofarray = (arr) => arr[Math.floor(Math.random() * 3)]
 
   return (
-    <div className="hompage-list-container">
-      <div className="homepage-list-title py-1 px-5">{title}</div>
+    <div className="hompage-list-container mt-4 mx-2 ">
+      <div className="homepage-list-title mb-4 py-3 px-5">{title}</div>
       {props.map((item, index) => {
         return (
           <div
-            className="homepage-list-eachbox py-1 px-3"
+            className="homepage-list-eachbox px-3"
             style={{ animationDelay: `${index * 0.5}s` }}
           >
             <Link to={`/scores/${item.id}`} className="scorelist-link">
-              <div className="homepage-list-box-name mb-1">
-                <b>{item.name}</b>
+              <div className="homepage-list-box-name mb-1 mt-2">
+                <b className="">{textfitter(item.name)}</b>
               </div>
               <div> {item.composer}</div>
               <div> {item.instrument}</div>
@@ -41,6 +48,9 @@ export default function Scorelist({ props, title }) {
                     onDeleteSuccess={handleDeleteSuccess}
                   />
                 ) : null}
+              </div>
+              <div className="difficalty-button-scorelist-container ">
+                {getrandomofarray(dificalty)}
               </div>
             </Link>
           </div>

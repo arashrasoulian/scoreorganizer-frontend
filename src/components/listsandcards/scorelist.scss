@@ -1,20 +1,29 @@
+
 .homepage-list-title {
   color: $deep-navy;
   text-align: center;
-  // background-color: $deep-navy;
   box-shadow: 0px 2px 6px 2px rgba(30, 42, 94, 0.2);
   border-radius: 5px;
-
   margin: 8px -8px;
+  font-size: 1.5rem;
+
 }
 
 .homepage-list-eachbox {
-  // background-color: $sunny-yellow;
-  font-size: 0.7rem;
-  line-height: 12px;
-  margin: 8px -8px;
-  border-radius: 5px;
-  box-shadow: 0px 2px 6px 2px rgba(205, 176, 123, 0.2);
+  background-color: $deep-navy;
+  color: white !important;
+  font-size: 0.9rem;
+  height: 6rem;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+border-radius: 10px;
+border: 2px solid $light-blue;
+box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+margin: 10px 10px;
+transition: all 0.6s ease;
+}
+.homepage-list-box-name{
+  font-size: 1.2rem !important;
 
 }
 
@@ -26,6 +35,13 @@
   animation: fadeInUp 1s ease forwards;
 }
 
+.homepage-list-eachbox:hover{
+  color: white !important;
+  padding: 2px 0px;
+  margin: 0px !important;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+  transform: scale(1.15);
+}
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -41,14 +57,23 @@
 
 .scorelist-link {
   text-decoration: none !important;
-  color: $ocean-teal;
+  color: white !important;
   position: relative;
 }
 
 .delete-button-scorelist-container {
   position: absolute;
-  top: 10px;
+  top: 2px;
   right: -10px;
+}
+.difficalty-button-scorelist-container{
+  position: absolute;
+  bottom: 2px;
+  right: 10px;
+  background-color: $sunny-yellow;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: $deep-navy;
 }
 
 .delete-button-scorelist {
@@ -58,7 +83,6 @@
 .uploader-list-info {
   position: absolute;
   bottom: 100%;
-  /* Position it above the card */
   left: 50%;
   transform: translateX(-50%);
   padding: 8px;
