@@ -10,13 +10,16 @@ export default function Landingpage() {
 
   return (
     <div className="landingpage-container">
+      <div className="landingpage-background-container">
+
+
       <Slideshow />
       <div className="landingpage-data-boxes">
         <div className="row">
           {data &&
             Object.entries(data).map(([key, value]) => {
               return (
-                <div className="col-xl-4 col-md-6 col-12">
+                <div className="col-xl-4 col-md-6 col-12 mb-2">
                   <div className="landingpage-static">
                     <div className="landingpage-static-data ">
                       {key === "total_users" ? (
@@ -60,6 +63,7 @@ export default function Landingpage() {
           <div className="col-xl-2 col-md-6 col-12  "></div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

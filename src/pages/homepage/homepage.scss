@@ -29,12 +29,8 @@
 }
 
 .homepage-top-cover {
-  background-image: url(../../../public/images/homepagecover2.png);
   height: 60vh;
-  width: 100%;
-  background-position: center center;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+  width: 96.5%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -42,25 +38,47 @@
   overflow: hidden;
   position: relative;
   border: 2px solid white;
+  margin: 2%;
+  margin-top: 80px;
+
 }
+
+.homepage-top-cover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(../../../public/images/homepagecover2.png);
+  background-size: cover;
+  background-position: center;
+  // background-size: 100% auto;
+  // background-repeat: no-repeat;
+  background-color: rgba(50, 28, 1, 0.5);
+  /* Red with 0.5 opacity */
+  z-index: 1;
+  opacity: 0.6;
+}
+
 
 .homepage-top-cover h1 {
+  position: relative;
+  z-index: 2;
   position: absolute;
-  top: 20vh;
-  left: 3vw;
-  color: white;
-  font-size: 2rem;
-  width: 20vw;
+  color: $deep-navy;
+  font-size: calc(3rem + 2vw);
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.homepage-lists-container{
+padding: 0px 5vw;
+}
 .homepage-ad-container {
   height: 310px;
   animation: createBox 2s;
   border-radius: 5px;
   padding: 0px 10px;
   margin-top: 10px;
-
   color: $deep-navy;
   text-align: center;
 

@@ -19,11 +19,11 @@ export default function Homepage() {
       <div className="homepage-top-cover ">
         <h1>Discover the Beauty of Music</h1>
       </div>
-      <div className="row homepage-lists-container">
-        <div className="col-lg-7 col-12 row">
+      <div className="homepage-lists-container">
+        <div className="row">
           {titles.map((title) => {
             return (
-              <div key={title} className="col-12 col-md-4 ">
+              <div key={title} className="col-12 col-md-6 col-xl-4">
                 <Scorelist props={data[title[1]]} title={title[0]} />
               </div>
             );
