@@ -1,11 +1,9 @@
-
 .landingpage-slideshow-box-top {
-  background-color: white ;
+  background-color: white;
   height: 50vh;
-margin:10vh 10vw;
-margin-top: 15vh;
-  // border-bottom-left-radius: 30px 30px;
-  // border-bottom-right-radius: 30px 30px;
+  max-height: 50vw;
+  margin: 10vh 10vw;
+  margin-top: 15vh;
   position: relative;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 
@@ -18,15 +16,14 @@ margin-top: 15vh;
   color: $light-blue ;
 }
 
-
 .landingpage-slide-top-button {
   position: absolute;
   left: 11vw;
   bottom: 10vh;
 }
-.landingpage-slide-top-button .link-getstart{
-  text-decoration: none !important;
 
+.landingpage-slide-top-button .link-getstart {
+  text-decoration: none !important;
 }
 
 .landingpage-slide-top-button .sign-link {
@@ -40,9 +37,6 @@ margin-top: 15vh;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-
-
-
 .landingpage-slide-top-button .sign-link:hover {
   transform: scale(1.06) !important;
   background-color: $light-gray;
@@ -50,34 +44,55 @@ margin-top: 15vh;
 
 
 
-
-
-
-
 .landingpage-slideshow-container {
-  position: relative;
   height: 50vh;
+  padding: 0px 5vw;
 }
 
-.landingpage-slideshow-top img {
-  position: absolute;
-  right: 5vw;
-  top: 4vh;
-  height: 15vw;
+.landingpage-slideshow-container img {
+
+  height: 20vw;
 
 }
 
 .landingpage-slide-top-title {
-  position: absolute;
-  left: 11vw;
-  top: 3vh;
   max-width: 37vw;
 
 }
 
 .landingpage-slideshow-top p {
-  font-size:calc(1rem + 1vw) ;
+  font-size: calc(1rem + 1vw);
 }
-.carousel-control-prev{
-  color:black !important;
+
+.carousel-control-prev {
+  color: black !important;
+}
+
+
+@media (max-width: 767px) {
+  .landingpage-slideshow-container img {
+    height: 25vw;
+    margin-top: -24vh;
+    margin-left: 30vw;
+  }
+
+  .landingpage-slide-top-button {
+    margin-bottom: -4vh;
+    margin-left: -10vw;
+  }
+}
+
+@media (max-width:440px) {
+  .landingpage-slide-top-button {
+    margin-bottom: -7vh;
+    margin-left: 6vw;
+
+  }
+
+  .landingpage-slide-top-button .sign-link {
+    font-size: 0.8rem;
+
+    padding: 0.6rem 1.6rem;
+
+  }
 }

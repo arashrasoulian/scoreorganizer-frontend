@@ -6,24 +6,20 @@
   overflow-x: hidden;
 }
 
-/* width */
 ::-webkit-scrollbar {
   width: 5px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px $light-gray;
   border-radius: 10px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: $ocean-teal;
   border-radius: 10px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: $deep-navy;
 }
@@ -33,23 +29,14 @@
   width: 96.5%;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  overflow: hidden;
   position: relative;
   border: 2px solid white;
   margin: 2%;
   margin-top: 80px;
-
-
 }
-.homepage-top-cover img{
-  opacity: 1 !important;
-  z-index: 2;
-  height: 70vh;
-  right: 10px !important;
 
-}
 .homepage-top-cover::before {
   content: "";
   position: absolute;
@@ -57,27 +44,79 @@
   background-image: url(../../../public/images/homepagecover2.png);
   background-size: cover;
   background-position: center;
-  // background-size: 100% auto;
-  // background-repeat: no-repeat;
-  // background-color: rgba(50, 28, 1, 0.5);
-  /* Red with 0.5 opacity */
+
   z-index: 1;
   opacity: 0.6;
+  border-bottom-right-radius: 30px ;
+  border-bottom-left-radius: 30px ;
+
+}
+
+.homepage-top-cover img {
+  opacity: 1;
+  z-index: 2;
+}
+
+.homepage-top-cover .cover-girl {
+  height: 72vh;
+  margin-right: -16vw;
+margin-bottom: -5vh;
+z-index: 3;
+
+}
+
+.homepage-top-cover .cello {
+  height: 65vh;
+  margin-bottom: -25vh;
+}
+
+.homepage-top-cover .musicnote {
+  height: 25vh;
+margin-top: -20vh;
+margin-right: -15vw;
 }
 
 
 .homepage-top-cover h1 {
-  position: relative;
   z-index: 2;
   position: absolute;
   color: $deep-navy;
   font-size: calc(3rem + 2vw);
-  // text-align: center;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
+  max-width: 40vw;
+  left: 3vw;
+
 }
-.homepage-lists-container{
-padding: 0px 5vw;
-margin : 10vh 5vw;
+@media(max-width : 991px){
+  .homepage-top-cover .cover-girl {
+    margin-right: 0vw;
+  }
+  .homepage-top-cover {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+
+
+.homepage-lists-container {
+  padding: 0px 5vw;
+  margin: 10vh 0vw;
+}
+
+@media(min-width:1500px){
+  .homepage-lists-container {
+    margin: 10vh 5vw;
+  }
+}
+
+
+.homepage-footer img{
+  height: 65vh;
+  width: 96.5%;
+  margin: 0 2% ;
+  margin-top: 10vh;
+
 }

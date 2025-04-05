@@ -18,9 +18,9 @@ export function Navbar() {
         <Link to="/" className="navbar-logo">
           <img src="logo2.png" alt="Logo" />
         </Link>
-        {currUser ? (
+        {/* {currUser ? (
           <span className="welcome-navbar d-none d-md-block">Hello {emailName(currUser.email).toUpperCase()} </span>
-        ) : null}
+        ) : null} */}
       </div>
 
       <div className="navbar-right">
@@ -40,7 +40,7 @@ export function Navbar() {
               Dashboard
             </Link>
 
-            <Link to="/" className="nav-link d-none d-md-block">
+            <Link to="/" className="nav-link d-none d-md-block mx-4">
               Home
             </Link>
             <div className="logout-button-navbar mx-4">

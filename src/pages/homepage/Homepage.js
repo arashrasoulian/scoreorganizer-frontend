@@ -17,11 +17,16 @@ export default function Homepage() {
   return (
     <div className="homepage-container">
       <div className="homepage-top-cover ">
-        <h1>Discover the Beauty of Music</h1>
-        <img src="images/musicnote.png" />
-        <img src="images/cover-girl.png" />
-        <img src="images/cello.png" />
+        <h1 className="d-none d-xl-block">Discover the Beauty of Music</h1>
+        <img
+          src="images/cover-girl-trans.png"
+          alt="cover"
+          className="cover-girl"
+        />
+        <img src="images/musicnote.png" alt="cover" className="musicnote d-none d-xxl-block" />
+        <img src="images/cello.png" alt="cover" className="cello d-none d-xxl-block" />
       </div>
+
       <div className="homepage-lists-container">
         <div className="row">
           {titles.map((title) => {
@@ -40,7 +45,9 @@ export default function Homepage() {
       <div>
         <IntroductionHomepage />
       </div>
-
+      <div className="homepage-footer">
+        <img src="images/footer_girl.png" alt="cover" className="footer" />
+      </div>
       <div></div>
     </div>
   );
