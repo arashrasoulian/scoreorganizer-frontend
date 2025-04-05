@@ -1,0 +1,24 @@
+.introduction-homepage-title {
+  text-align: center;
+  color: $deep-navy;
+  margin-top: 20vh;
+  font-size: 2.2rem;
+}
+.introduction-homepage-description{
+  text-align: center;
+  color: $deep-navy;
+  margin: 20px 20vh;
+  font-size: 1.4rem;
+}
+.introduction-homepage-circle-container{
+  margin: 10% 10% !important;
+}
+.introduction-hompage-first-circle{
+  display: flex;
+
+}
+.introduction-hompage-first-circle img{
+  height: 200px;
+  border-radius: 50%;
+}
+

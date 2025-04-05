@@ -1,0 +1,55 @@
+.coverunderlists-homepage-container {
+  height: 80vh;
+  width: 100%;
+  background-image: url("../../../public/images/homepage_ad/backgroundcover2.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-top: 20vh;
+}
+
+
+
+.coverunderlists-homepage-image-container img {
+
+  height: calc(27vh + 17vw);
+  position: absolute;
+  left: 44%;
+  top: 100px !important;
+
+}
+
+
+
+.coverunderlists-homepage-image-container {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 1.5s ease-out;
+  transform-origin: center;
+  padding-top: 30vh;
+}
+
+.coverunderlists-homepage-image-container.visible {
+  opacity: 1;
+  transform: scale(1);
+
+}
+
+.coverunderlists-homepage-text-container {
+  transition: all 1.5s ease-out;
+  margin-left: 15vw;
+  opacity: 0;
+  color: $deep-blue;
+  font-size: 2.5rem;
+
+}
+
+.coverunderlists-homepage-text-container.visible {
+  margin-left: 30vw;
+  opacity: 1;
+  color: $deep-blue;
+  font-size: 2.5rem;
+
+
+}
