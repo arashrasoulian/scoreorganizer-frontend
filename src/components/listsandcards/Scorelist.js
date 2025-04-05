@@ -21,7 +21,7 @@ export default function Scorelist({ props, title }) {
   const getrandomofarray = (arr) => arr[Math.floor(Math.random() * 3)]
 
   return (
-    <div className="hompage-list-container mt-4 mx-2 ">
+    <div className="hompage-list-container mt-4 mx-md-2 ">
       <div className="homepage-list-title mb-4 py-3 px-5">{title}</div>
       {props.map((item, index) => {
         return (

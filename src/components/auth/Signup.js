@@ -53,23 +53,27 @@ const Signup = ({ setCurrUser }) => {
     <div className=" login-body">
       <div className="sign-in-box">
         <form ref={formRef} onSubmit={handleSubmit}>
-
           <input type="email" name="email" placeholder="email" required />
           <br />
-          {/* first name:{" "}
-        <input type="text" name="first_name" placeholder="merila" required />
-        <br />
-        last name:{" "}
-        <input type="text" name="last_name" placeholder="zareii" required />
-        <br />
-        city: <input type="text" name="city" placeholder="tehran" required />
-        <br />
+          first name:{" "}
+          <input type="text" name="first_name" placeholder="merila" required />
+          <br />
+          last name:{" "}
+          <input type="text" name="last_name" placeholder="zareii" required />
+          <br />
+          city: <input type="text" name="city" placeholder="tehran" required />
+          {/* <br />
            phone number:{" "}
-        <input type="tel" name="phone" placeholder="091211111" required />
-        <br />
-          are you a teacher: <input type="checkbox" name='teacher' placeholder="email" defaultChecked={true} />
-      <br /> */}
-
+        <input type="tel" name="phone" placeholder="091211111" required /> */}
+          <br />
+          are you a teacher:{" "}
+          <input
+            type="checkbox"
+            name="teacher"
+            placeholder="email"
+            defaultChecked={true}
+          />
+          <br />
           <input
             type="password"
             name="password"
@@ -77,12 +81,15 @@ const Signup = ({ setCurrUser }) => {
             required
           />
           <br />
-          <button type="submit" value="Submit" >sign up</button>
+          <button type="submit" value="Submit">
+            sign up
+          </button>
         </form>
         <br />
         <div>
-        <a href="#signin" onClick={handleClick}>Already have an Account</a>
-
+          <a href="#signin" onClick={handleClick}>
+            Already have an Account
+          </a>
         </div>
       </div>
     </div>

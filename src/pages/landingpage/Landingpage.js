@@ -19,7 +19,7 @@ export default function Landingpage() {
           {data &&
             Object.entries(data).map(([key, value]) => {
               return (
-                <div className="col-xl-4 col-md-6 col-12 mb-2">
+                <div className="col-xl-4 col-lg-6 col-12 mb-2">
                   <div className="landingpage-static">
                     <div className="landingpage-static-data ">
                       {key === "total_users" ? (
@@ -47,7 +47,7 @@ export default function Landingpage() {
               );
             })}
 
-          <div className="col-xl-4 col-md-6 col-12">
+          <div className="col-xl-4 col-lg-6 col-12">
             <div className="landingpage-static">
               <div className="landingpage-static-data">
                 <div class="landingpage-statics-icon">

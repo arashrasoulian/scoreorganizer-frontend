@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const slidesData = [
   {
-    text: 'Store, share, and sort sheet musics with ease!',
+    text: 'Store, share,Read  and sort sheet musics with ease!',
     imageslide : "store-slide.png",
   },
   {
@@ -15,6 +15,7 @@ const slidesData = [
     imageslide : "collaborate-slide.png",
   }
 ];
+
 
 const Slideshow = () => {
   return (
@@ -38,13 +39,13 @@ const Slideshow = () => {
         <div className="carousel-inner">
           {slidesData.map((slide, index) => (
             <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
-              <div className="landingpage-slideshow-container">
-                <div className="landingpage-slide-top-title">
+              <div className="row landingpage-slideshow-container">
+                <div className="col-sm-10 col-md-7 landingpage-slide-top-titl">
                   <p>
                     <b>{slide.text}</b>
                   </p>
                 </div>
-                <div className="svglink d-none d-md-block">
+                <div className=" col-md-4 d-none d-sm-block">
                 <img
                             src={`images/landingpage-icons/${slide.imageslide}`}
                             alt="member"
@@ -77,9 +78,6 @@ const Slideshow = () => {
       </div>
 
       <div className="landingpage-slide-top-button">
-        {/* <Link to="/signin" className="sign-link">
-          Sign In
-        </Link> */}
         <Link to="/signup" className='link-getstart'>
         <div className="sign-link mx-5">
         Get Started
