@@ -1,40 +1,48 @@
-.dashboard-sidebar-container{
+.dashboard-sidebar-container {
   background-color: $light-blue;
   margin-left: 5vw;
   padding-top: 10vh;
-  // padding-top: 2vw;
 }
-.dashboard-sidebar-container h3{
+
+.dashboard-sidebar-container h3 {
   margin-left: 32px !important;
 
   margin-bottom: 3vh;
 }
-.dashboard-sidebar-container li :hover{
+
+.dashboard-sidebar-container span {
+  margin-left: 32px !important;
+}
+
+.dashboard-sidebar-container li :hover {
   color: white;
 }
+
 .dashboard-sidebar-container li {
   border-bottom: 2px solid white;
   color: white;
   height: 50PX;
-  // margin-top: 5px;
 }
 
-.dashboard-sidebar-container span{
+.dashboard-sidebar-container span {
   color: white;
 
 }
-.sidebar-pagebutton-active{
-  background-color: $sunny-yellow !important; /* Red background for the active link */
+
+.sidebar-pagebutton-active {
+  background-color: $sunny-yellow !important;
+  /* Red background for the active link */
   color: white;
   position: relative;
 
 }
-.sidebar-pagebutton-active .triangle-right{
+
+.sidebar-pagebutton-active .triangle-right {
   width: 0;
-	height: 0;
-	border-top: 25px solid transparent;
-	border-left: 25px solid $sunny-yellow;
-	border-bottom: 25px solid transparent;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-left: 25px solid $sunny-yellow;
+  border-bottom: 25px solid transparent;
   position: absolute;
   right: -25px;
 }

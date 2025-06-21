@@ -10,9 +10,28 @@ const Myscores = () => {
   const { data, loading, error } = useFetch("/api/v1/scores");
   const currUser = useSelector((state) => state.user.currUser);
 
+
   const groupScoresBySessionType = (scores) => {
     return scores.reduce((acc, score) => {
-      const sessionType = score.session_type || "uploaded";
+
+      let sessionType = score.session_type || "uploaded";
+      switch (score.session_type) {
+        case "repertoire":
+          sessionType = "Repertoire";
+          break;
+        case "practicing":
+          sessionType = "Practicing";
+          break;
+        case "future_plan":
+          sessionType = "Future Plan";
+          break;
+        case "orchestral":
+          sessionType = "Orchestral";
+          break;
+        default:
+          sessionType = "upload";
+      }
+
       if (!acc[sessionType]) {
         acc[sessionType] = [];
       }
@@ -42,11 +61,20 @@ const Myscores = () => {
   }
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error fetching data: {error.message}</p>;
- console.log(data);
+  console.log(data);
 
   return (
     <div className="myscores-container">
-      <div className="row  d-flex justify-content-center align-items-center searchbar-myscores-container">
+      <div className="d-flex justify-content-end ">
+        <div
+          onClick={() => setModalShow(true)}
+          className="mt-5 mx-4 mt-4  myscore-addnewpdf-button col-4 col-md-2"
+        >
+          Add new pdf
+        </div>
+      </div>
+
+      <div className="mb-3 row  d-flex justify-content-center align-items-center searchbar-myscores-container">
         <div className="col-md-8">
           <div className="searchform-myscores">
             <i className="fa fa-search"></i>
@@ -61,19 +89,13 @@ const Myscores = () => {
           </div>
         </div>
       </div>
-      <div className="d-flex justify-content-center align-items-center">
-        <div
-          onClick={() => setModalShow(true)}
-          className="mx-4 mt-4 py-2 px-3 myscore-addnewpdf-button col-4 col-md-3"
-        >
-          add new pdf
-        </div>
-      </div>
+
       <div className="row mx-4 mt-1">
         {Object.keys(groupedScores).length === 0 ? (
           <p>No scores available</p>
         ) : (
           Object.keys(groupedScores).map((sessionType, index) => (
+
             <div key={index} className="col-4 col-md-3">
               <Scorelist
                 props={groupedScores[sessionType]}

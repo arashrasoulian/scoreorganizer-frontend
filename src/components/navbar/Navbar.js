@@ -7,27 +7,18 @@ export function Navbar() {
   const dispatch = useDispatch();
   const currUser = useSelector((state) => state.user.currUser);
 
-  function emailName( email ) {
-    const username = email.split('@')[0];
-    return username;
-  }
-
   return (
     <nav className="navbar-container  fixed-top">
       <div className="navbar-left">
         <Link to="/" className="navbar-logo">
           <img src="logo2.png" alt="Logo" />
         </Link>
-        {/* {currUser ? (
-          <span className="welcome-navbar d-none d-md-block">Hello {emailName(currUser.email).toUpperCase()} </span>
-        ) : null} */}
       </div>
 
       <div className="navbar-right">
         {!currUser ? (
           <>
             <Link to="/signin" className="nav-sign-link">
-
               Sign In
             </Link>
             <Link to="/signup" className="nav-sign-link">
@@ -46,7 +37,10 @@ export function Navbar() {
             <div className="logout-button-navbar mx-4">
               <Logout setCurrUser={() => dispatch(clearCurrUser())} />
             </div>
-            <Link to="/dashboard/personaldata" className="nav-link d-none d-md-block">
+            <Link
+              to="/dashboard/personaldata"
+              className="nav-link d-none d-md-block"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"

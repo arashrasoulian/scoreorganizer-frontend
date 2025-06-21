@@ -3,14 +3,18 @@ import { Link } from "react-router-dom";
 import DeleteButton from "./DeleteButton";
 
 export default function Scorelist({ props, title }) {
-  const [isDeleted, setIsDeleted] = useState(false); // Track if the card is deleted
+  const [isDeleted, setIsDeleted] = useState(false);
   const dificalty = ["Biginner", "Intermediate", "Advanced"];
+  const [listTitle, setlisttitle] = useState("Repertoire");
 
   const handleDeleteSuccess = () => {
-    setIsDeleted(true); // Remove the card from the UI when deleted
+ console.log(" Arash salam");
+    setIsDeleted(true);
+
+
   };
 
-  if (isDeleted) return null; // Don't render if the card is deleted
+  if (isDeleted) return null;
   function emailName(email) {
     const username = email.split("@")[0];
     return username;
@@ -18,7 +22,7 @@ export default function Scorelist({ props, title }) {
   const textfitter = (text) => {
     return text.length > 22 ? text.slice(0, 22) + "..." : text;
   };
-  const getrandomofarray = (arr) => arr[Math.floor(Math.random() * 3)]
+  const getrandomofarray = (arr) => arr[Math.floor(Math.random() * 3)];
 
   return (
     <div className="hompage-list-container mt-4 mx-md-2 ">

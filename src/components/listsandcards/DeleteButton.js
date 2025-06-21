@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 const DeleteButton = ({ scoreId, isOwner, storingId, onDeleteSuccess }) => {
+  const API_URL = process.env.REACT_APP_API_URL;
+
   const [isDeleting, setIsDeleting] = useState(false);
 
   const handleDelete = async () => {
@@ -8,9 +10,9 @@ const DeleteButton = ({ scoreId, isOwner, storingId, onDeleteSuccess }) => {
     try {
       let url = "";
       if (isOwner) {
-        url = `https://backend-scoreorganizer-08671ae228b7.herokuapp.com/api/v1/scores/${scoreId}`;
+        url = `${API_URL}/api/v1/scores/${scoreId}`;
       } else {
-        url = `https://backend-scoreorganizer-08671ae228b7.herokuapp.com/api/v1/storings/${storingId}`;
+        url = `${API_URL}/api/v1/storings/${storingId}`;
       }
 
       const response = await fetch(url, {

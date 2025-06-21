@@ -9,7 +9,7 @@ const Sidebar = () => {
   return (
     <div className="col-auto col-md-3 col-xl-2 px-0 dashboard-sidebar-container">
       <div className=" align-items-center   pt-5  text-white min-vh-100">
-        <h3 className="ms-3">Dashboard</h3>
+        <h3 className="">Dashboard</h3>
 
         <ul className="nav nav-pills flex-column  mb-0  " id="menu">
           <li className={isActive("/dashboard/personaldata") ? "sidebar-pagebutton-active  " : ""}>
