@@ -35,12 +35,12 @@ const IntroductionHomepage = () => {
       <div className="row introduction-homepage-circle-container">
         {introductioncircle.map((circle , index) => {
           return (
-            <div key={index} className="col-4 mx-0 introduction-hompage-first-circle">
+            <div key={index} className=" col-12 col-lg-4 mx-0 introduction-hompage-circle">
               <img src={`${circle.image}`} alt="cilce-image" />
 
-              <div className="mx-3 mt-2">
+              <div className="mx-md-3 mx-lg-0 mt-sm-5 mt-2  ">
                 <h5>{circle.title}</h5>
-                <p> {circle.text}</p>
+                <p className="d-lg-none d-xxl-block"> {circle.text}</p>
               </div>
             </div>
           );
