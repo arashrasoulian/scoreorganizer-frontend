@@ -31,7 +31,6 @@ export function Myverticallycenteredmodal(props) {
         body: formData,
         headers: {
           Authorization: ` ${token}`,
-          // "Content-Type": "application/json",
         },
         credentials: "include",
       });
@@ -56,16 +55,17 @@ export function Myverticallycenteredmodal(props) {
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
+      className="newpdf-modal-container"
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
           Add score to your Dashboard
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body>
+      <Modal.Body className="newpdf-modal-body">
         <form onSubmit={handleSubmit}>
           <div>
-            <label>image:</label>
+            <label>Pdf:</label>
             <input
               type="file"
               accept="application/pdf"

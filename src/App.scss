@@ -1,6 +1,6 @@
 /* The following line can be included in a src/App.scss */
 @import '~bootstrap/scss/bootstrap';
-@import "./style/custom.scss";
+
 @import "./style/config/color.scss";
 
 // import pages
@@ -17,7 +17,7 @@
 @import "./components/dashboardcomponents/sidebar.scss";
 @import "./components/homepage/coverunderlists.scss";
 @import "./components/homepage/introductionhomepage.scss";
-
+@import "./components/dashboardcomponents/myverticalcentermodal.scss";
 .app-body-container{
   overflow-x: hidden;
 }
