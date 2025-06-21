@@ -1,26 +1,26 @@
 .coverunderlists-homepage-container {
-  height: 80vh;
   width: 100%;
-  background-image: url("../../../public/images/homepage_ad/backgroundcover2.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
   position: relative;
-  margin-top: 20vh;
+  min-height: 70vh;
 }
 
+.coverunderlists-homepage-background {
+  position: absolute;
+  z-index: 0;
+}
 
+.coverunderlists-homepage-background>img {
+  width: 100vw;
+  max-height: 90vh;
+}
 
-.coverunderlists-homepage-image-container img {
-
-  height: calc(27vh + 17vw);
+.coverunderlists-homepage-image-container>img {
+  max-height: 60vh;
   position: absolute;
   left: 44%;
-  top: 100px !important;
-
+  top: 5vh;
+  max-width: 50vw;
 }
-
-
 
 .coverunderlists-homepage-image-container {
   opacity: 0;
@@ -30,26 +30,73 @@
   padding-top: 30vh;
 }
 
-.coverunderlists-homepage-image-container.visible {
-  opacity: 1;
-  transform: scale(1);
-
-}
-
 .coverunderlists-homepage-text-container {
   transition: all 1.5s ease-out;
-  margin-left: 15vw;
+  margin-left: 10vw;
   opacity: 0;
   color: $deep-blue;
-  font-size: 2.5rem;
-
+  font-size: calc(1rem + 1vw);
+  position: absolute;
+  top: 13vh;
 }
 
 .coverunderlists-homepage-text-container.visible {
-  margin-left: 30vw;
+  left: 8vw;
   opacity: 1;
   color: $deep-blue;
-  font-size: 2.5rem;
+  font-size: calc(1rem + 1vw);
 
+}
 
+@media(min-width : 530px) {
+  .coverunderlists-homepage-image-container>img {
+    top: 9vh;
+  }
+
+  .coverunderlists-homepage-text-container.visible {
+    left: 7vw;
+    font-size: calc(1.5rem + 2vw);
+    top: 24vh;
+  }
+}
+
+@media(min-width : 1030px) {
+  .coverunderlists-homepage-background>img {
+    width: 80vw;
+    margin-left: 10vw;
+  }
+  .coverunderlists-homepage-image-container>img {
+    max-height: 55vh;
+    max-width: 40vw;
+    top: 12vh;
+  }
+  .coverunderlists-homepage-text-container.visible {
+    left: 13vw;
+    font-size: calc(1rem + 2vw);
+    top: 28vh;
+  }
+}
+
+@media(min-width : 1240px) {
+  .coverunderlists-homepage-background>img {
+    width: 60vw;
+    margin-left: 20vw;
+  }
+
+  .coverunderlists-homepage-image-container>img {
+    max-height: 60vh;
+    max-width: 28vw;
+    left: 47vw;
+    top: 12vh;
+  }
+  .coverunderlists-homepage-text-container.visible {
+    left: 20vw;
+    font-size: calc(1rem + 2vw);
+    top: 27vh;
+  }
+}
+
+.coverunderlists-homepage-image-container.visible {
+  opacity: 1;
+  transform: scale(1);
 }

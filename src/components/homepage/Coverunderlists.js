@@ -4,6 +4,9 @@ import ZoomInOnScroll from "../ZoomInOnScroll";
 const Coverunderlists = () => {
   return (
     <div className="coverunderlists-homepage-container">
+      <div className="coverunderlists-homepage-background">
+        <img src= "images/homepage_ad/backgroundcover2.png"/>
+      </div>
 
       <ZoomInOnScroll className="coverunderlists-homepage-image-container">
         <img src="images/homepage_ad/coverunderlists.png" alt="imageforcover" />

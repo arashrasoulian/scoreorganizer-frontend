@@ -45,10 +45,11 @@ export default function Homepage() {
       <div>
         <IntroductionHomepage />
       </div>
+
       <div className="homepage-footer">
         <img src="images/footer_girl.png" alt="cover" className="footer" />
       </div>
-      <div></div>
+    
     </div>
   );
 }
