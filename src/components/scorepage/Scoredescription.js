@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-const Scoredescription = ({props}) => {
+
+const Scoredescription = ({ props }) => {
   const [sessionType, setSessionType] = useState("repertoire");
   const [message, setMessage] = useState("");
   const token = useSelector((state) => state.user.token);
@@ -34,7 +35,6 @@ const Scoredescription = ({props}) => {
       console.log(error);
     }
     console.log(props.composer);
-
   };
   return (
     <div className="col-12 col-lg-4 scorepage-descriptions mt-3 mt-lg-5">
